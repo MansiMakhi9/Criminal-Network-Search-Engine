@@ -1,0 +1,37 @@
+create database csedb;
+use csedb;
+
+create table loginmaster(
+userid varchar(20) primary key,
+pwd varchar(20),
+userrole varchar(10)
+);
+
+insert into loginmaster values('admin','super','admin');
+
+create table dept(
+deptcode varchar(20) primary key,
+City varchar(20),
+Area varchar(20),
+contactno varchar(50)
+);
+
+
+create table criminalmaster(
+id integer primary key auto_increment,
+name varchar(50),
+deptcode varchar(20),
+address varchar(50),
+gender varchar(10),
+height integer,
+skincolor varchar(15),
+hairstyle varchar(15),
+age integer,
+bodytype varchar(15),
+bodymarks varchar(50),
+eyecolor varchar(15),
+status varchar(15),
+wanted varchar(3),
+crimedetails varchar(500),
+photo varchar(20)
+);
